@@ -1,0 +1,9 @@
+services:
+  valve:
+    build:
+      context: https://github.com/DocDriven/sim-images.git
+      dockerfile: valve/server/c
+    ports:
+      - 4840:4840
+    environment:
+      TZ=Europe/Berlin
