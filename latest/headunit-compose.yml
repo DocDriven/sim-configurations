@@ -1,0 +1,12 @@
+services:
+  headunit-client:
+    build:
+      context: https://github.com/DocDriven/sim-images.git
+      dockerfile: headunit-client/asyncua/latest/Dockerfile
+    environment:
+      - TZ=Europe/Berlin
+      - SERVER_URI=opc.tcp://192.168.10.11:4840
+      - INTERVAL=2
+    network_mode: bridge
+    ports:
+      - "8050:8050"
