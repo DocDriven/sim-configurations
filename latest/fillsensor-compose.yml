@@ -8,7 +8,7 @@ services:
     networks:
       - fillsensor-net
   fillsensor-process-sim:
-    build: "https://github.com/DocDriven/sim-images.git#master:fillsensor-process-sim/open62541/latest"
+    build: "https://github.com/DocDriven/sim-images.git#master:fillsensor-process-sim"
     networks:
       - fillsensor-net
     depends_on:
