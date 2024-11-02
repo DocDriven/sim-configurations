@@ -1,8 +1,6 @@
 services:
   valve:
-    build:
-      context: https://github.com/DocDriven/sim-images.git
-      dockerfile: valve-server/open62541/latest/Dockerfile
+    build: "https://github.com/DocDriven/sim-images.git#latest:valve-server/open62541/latest"
     ports:
       - "4840:4840"
     environment:

@@ -1,8 +1,6 @@
 services:
   fillsensor-server:
-    build:
-      context: https://github.com/DocDriven/sim-images.git
-      dockerfile: fillsensor-server/open62541/latest/Dockerfile
+    build: "https://github.com/DocDriven/sim-images.git#master:fillsensor-server/open62541/latest"
     ports:
       - "4840:4840"
     environment:
@@ -10,9 +8,7 @@ services:
     networks:
       - fillsensor-net
   fillsensor-process-sim:
-    build:
-      context: https://github.com/DocDriven/sim-images.git
-      dockerfile: fillsensor-process-sim/Dockerfile
+    build: "https://github.com/DocDriven/sim-images.git#master:fillsensor-process-sim/open62541/latest"
     networks:
       - fillsensor-net
     depends_on:
